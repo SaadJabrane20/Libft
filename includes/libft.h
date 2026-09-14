@@ -6,7 +6,7 @@
 /*   By: sajabran <sajabran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 22:54:47 by sajabran          #+#    #+#             */
-/*   Updated: 2026/09/14 00:42:14 by sajabran         ###   ########.fr       */
+/*   Updated: 2026/09/14 03:05:25 by sajabran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,18 @@
 # include <stddef.h>
 # include <stdlib.h>
 
-void	*memcpy(void *dest, const void *src, size_t n);
-int		ft_isalpha(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_strlen(char *str);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-char	*ft_strchr(const char *str, int c);
-char	*ft_strrchr(const char *str, int c);
-int		ft_strncmp(char *s1, char *s2, unsigned int n);
+void			*memcpy(void *dest, const void *src, size_t n);
+int				ft_isalpha(int c);
+int				ft_isalnum(int c);
+int				ft_isascii(int c);
+int				ft_isprint(int c);
+int				ft_strlen(char *str);
+int				ft_toupper(int c);
+int				ft_tolower(int c);
+char			*ft_strchr(const char *str, int c);
+char			*ft_strrchr(const char *str, int c);
+int				ft_strncmp(char *s1, char *s2, unsigned int n);
+int				ft_atoi(char *str);
+size_t			ft_strlcpy(char *dest, char *src, size_t size);
+size_t			ft_strlcat(char *dest, char *src, size_t size);
 #endif

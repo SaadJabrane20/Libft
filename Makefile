@@ -6,7 +6,12 @@
 #    By: sajabran <sajabran@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/13 15:37:48 by sajabran          #+#    #+#              #
-#    Updated: 2026/09/13 15:37:49 by sajabran         ###   ########.fr        #
+#    Updated: 2026/09/14 02:41:20 by sajabran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+NAME = Libft
+CC = CC
+FLAGS = -Wall -Werror -Wextra
+
 
