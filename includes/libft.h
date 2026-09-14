@@ -6,7 +6,7 @@
 /*   By: sajabran <sajabran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 22:54:47 by sajabran          #+#    #+#             */
-/*   Updated: 2026/09/14 03:05:25 by sajabran         ###   ########.fr       */
+/*   Updated: 2026/09/14 18:15:10 by sajabran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,8 @@ int				ft_strncmp(char *s1, char *s2, unsigned int n);
 int				ft_atoi(char *str);
 size_t			ft_strlcpy(char *dest, char *src, size_t size);
 size_t			ft_strlcat(char *dest, char *src, size_t size);
+char			*ft_strnstr(const char *big, const char *little, size_t len);
+void			ft_bzero(void *s, size_t n);
+void			*memset(void *s, int c, size_t n);
+void			*ft_memmove(void *dest, const void *src, size_t n);
 #endif

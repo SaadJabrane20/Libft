@@ -1,39 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sajabran <sajabran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/14 03:05:35 by sajabran          #+#    #+#             */
-/*   Updated: 2026/09/14 18:04:40 by sajabran         ###   ########.fr       */
+/*   Created: 2026/09/14 18:09:18 by sajabran          #+#    #+#             */
+/*   Updated: 2026/09/14 18:12:23 by sajabran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	size_t	i;
-	size_t	src_len;
-	size_t	dest_len;
-	size_t	j;
+	size_t			i;
+	unsigned char	*ptr;
 
 	i = 0;
-	src_len = ft_strlen(src);
-	dest_len = ft_strlen(dest);
-	j = dest_len;
-	if (size == 0)
-		return (src_len);
-	if (dest_len >= size)
+	ptr = (unsigned char *)s;
+	while (i < n)
 	{
-		return (src_len + size);
-	}
-	while (src[i] != '\0' && (dest_len + i) < (size - 1))
-	{
-		dest[dest_len + i] = src[i];
+		ptr[i] = (unsigned char)c;
 		i++;
 	}
-	dest[dest_len + i] = '\0';
-	return (src_len + dest_len);
+	return (s);
 }
