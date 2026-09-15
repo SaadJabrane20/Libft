@@ -1,40 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sajabran <sajabran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/14 18:15:32 by sajabran          #+#    #+#             */
-/*   Updated: 2026/09/15 18:55:05 by sajabran         ###   ########.fr       */
+/*   Created: 2026/09/15 21:12:21 by sajabran          #+#    #+#             */
+/*   Updated: 2026/09/15 21:18:54 by sajabran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_calloc(size_t n, size_t size)
 {
-	size_t			i;
-	unsigned char	*d;
-	unsigned char	*s;
+	void		*ptr;
 
-	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	if (d == s || n == 0)
-		return (dest);
-	i = 0;
-	if (d < s)
-	{
-		while (i < n)
-		{
-			d[i] = s[i];
-			i++;
-		}
-	}
-	else
-	{
-		while (n-- > 0)
-			d[n] = s[n];
-	}
-	return (dest);
+	ptr = malloc(n * size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, n * size);
+	return (ptr);
 }

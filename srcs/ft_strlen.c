@@ -6,13 +6,13 @@
 /*   By: sajabran <sajabran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/13 15:50:31 by sajabran          #+#    #+#             */
-/*   Updated: 2026/09/14 00:29:16 by sajabran         ###   ########.fr       */
+/*   Updated: 2026/09/15 21:06:16 by sajabran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(char *str)
 {
 	int	i;
 
