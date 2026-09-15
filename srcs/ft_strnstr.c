@@ -6,7 +6,7 @@
 /*   By: sajabran <sajabran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 17:23:59 by sajabran          #+#    #+#             */
-/*   Updated: 2026/09/14 18:05:04 by sajabran         ###   ########.fr       */
+/*   Updated: 2026/09/16 00:16:04 by sajabran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@ char	*strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
+	char	*str;
 
+	str = (char *)big;
 	if (little[0] == '\0')
-		return (big);
+		return (str);
 	i = 0;
 	while (big[i] != '\0' && i < len)
 	{
@@ -26,7 +28,7 @@ char	*strnstr(const char *big, const char *little, size_t len)
 		while (i + j < len && big[i + j] == little[j] && little[j] != '\0')
 			j++;
 		if (little[j] == '\0')
-			return (&big[i]);
+			return (&str[i]);
 		i++;
 	}
 	return (NULL);
