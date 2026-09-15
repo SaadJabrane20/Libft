@@ -6,7 +6,7 @@
 /*   By: sajabran <sajabran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 03:05:35 by sajabran          #+#    #+#             */
-/*   Updated: 2026/09/14 18:04:40 by sajabran         ###   ########.fr       */
+/*   Updated: 2026/09/15 21:45:22 by sajabran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,10 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 	size_t	i;
 	size_t	src_len;
 	size_t	dest_len;
-	size_t	j;
 
 	i = 0;
 	src_len = ft_strlen(src);
 	dest_len = ft_strlen(dest);
-	j = dest_len;
 	if (size == 0)
 		return (src_len);
 	if (dest_len >= size)
