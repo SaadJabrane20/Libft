@@ -6,7 +6,7 @@
 /*   By: sajabran <sajabran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 22:54:47 by sajabran          #+#    #+#             */
-/*   Updated: 2026/09/16 00:18:53 by sajabran         ###   ########.fr       */
+/*   Updated: 2026/09/18 17:49:45 by sajabran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include <stddef.h>
 # include <stdlib.h>
 
-void			*memcpy(void *dest, const void *src, size_t n);
+void			*ft_memcpy(void *dest, const void *src, size_t n);
 int				ft_isalpha(int c);
 int				ft_isalnum(int c);
 int				ft_isascii(int c);
@@ -31,7 +31,7 @@ size_t			ft_strlcpy(char *dest, char *src, size_t size);
 size_t			ft_strlcat(char *dest, char *src, size_t size);
 char			*ft_strnstr(const char *big, const char *little, size_t len);
 void			ft_bzero(void *s, size_t n);
-void			*memset(void *s, int c, size_t n);
+void			*ft_memset(void *s, int c, size_t n);
 void			*ft_memmove(void *dest, const void *src, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
