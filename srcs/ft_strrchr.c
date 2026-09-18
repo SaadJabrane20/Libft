@@ -6,7 +6,7 @@
 /*   By: sajabran <sajabran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/13 16:17:42 by sajabran          #+#    #+#             */
-/*   Updated: 2026/09/16 00:17:02 by sajabran         ###   ########.fr       */
+/*   Updated: 2026/09/18 17:47:21 by sajabran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	*s;
 
 	s = (char *)str;
