@@ -6,13 +6,13 @@
 /*   By: sajabran <sajabran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 02:56:20 by sajabran          #+#    #+#             */
-/*   Updated: 2026/09/14 03:04:12 by sajabran         ###   ########.fr       */
+/*   Updated: 2026/09/19 22:34:32 by sajabran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, char *src, size_t size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	src_len;
