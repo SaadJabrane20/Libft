@@ -6,7 +6,7 @@
 /*   By: sajabran <sajabran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/12 22:54:47 by sajabran          #+#    #+#             */
-/*   Updated: 2026/09/18 17:49:45 by sajabran         ###   ########.fr       */
+/*   Updated: 2026/09/18 18:01:18 by sajabran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void			*ft_memcpy(void *dest, const void *src, size_t n);
 int				ft_isalpha(int c);
 int				ft_isalnum(int c);
 int				ft_isascii(int c);
+int				ft_isdigit(int c);
 int				ft_isprint(int c);
 size_t			ft_strlen(char *str);
 int				ft_toupper(int c);
