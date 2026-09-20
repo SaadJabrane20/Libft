@@ -6,7 +6,7 @@
 #    By: sajabran <sajabran@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/13 15:37:48 by sajabran          #+#    #+#              #
-#    Updated: 2026/09/20 14:25:48 by sajabran         ###   ########.fr        #
+#    Updated: 2026/09/20 17:18:17 by sajabran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,16 @@ SRCS		=	ft_atoi.c \
 				ft_putstr_fd.c \
 				ft_putchar_fd.c \
 				ft_putendl_fd.c \
-				ft_putnbr_fd.c
+				ft_putnbr_fd.c \
+				ft_lstnew.c \
+				ft_lstadd_front.c \
+				ft_lstsize.c \
+				ft_lstlast.c \
+				ft_lstadd_back.c \
+				ft_lstdelone.c \
+				ft_lstclear.c \
+				ft_lstiter.c \
+				ft_lstmap.c
 
 OBJS		=	$(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 
