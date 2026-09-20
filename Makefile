@@ -6,7 +6,7 @@
 #    By: sajabran <sajabran@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/13 15:37:48 by sajabran          #+#    #+#              #
-#    Updated: 2026/09/19 22:57:41 by sajabran         ###   ########.fr        #
+#    Updated: 2026/09/20 14:25:48 by sajabran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,13 @@ SRCS		=	ft_atoi.c \
 				ft_substr.c \
 				ft_strjoin.c \
 				ft_strtrim.c \
-				ft_split.c
+				ft_split.c \
+				ft_itoa.c \
+				ft_strmapi.c \
+				ft_putstr_fd.c \
+				ft_putchar_fd.c \
+				ft_putendl_fd.c \
+				ft_putnbr_fd.c
 
 OBJS		=	$(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
 
