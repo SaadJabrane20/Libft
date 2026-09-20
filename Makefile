@@ -6,7 +6,7 @@
 #    By: sajabran <sajabran@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/13 15:37:48 by sajabran          #+#    #+#              #
-#    Updated: 2026/09/20 18:26:27 by sajabran         ###   ########.fr        #
+#    Updated: 2026/09/20 18:28:35 by sajabran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,8 @@ SRCS = srcs/ft_isalpha.c \
 	   srcs/ft_putchar_fd.c \
 	   srcs/ft_putstr_fd.c \
 	   srcs/ft_putendl_fd.c \
-	   srcs/ft_putnbr_fd.c
+	   srcs/ft_putnbr_fd.c \
+	   srcs/ft_striteri.c
 
 BONUS_SRCS = srcs/ft_lstnew.c \
 			 srcs/ft_lstadd_front.c \
