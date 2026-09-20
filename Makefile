@@ -6,81 +6,83 @@
 #    By: sajabran <sajabran@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/13 15:37:48 by sajabran          #+#    #+#              #
-#    Updated: 2026/09/20 17:18:17 by sajabran         ###   ########.fr        #
+#    Updated: 2026/09/20 18:26:27 by sajabran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	libft.a
+NAME = libft.a
 
-CC			=	cc
-CFLAGS		=	-Wall -Wextra -Werror
-AR			=	ar rcs
-RM			=	rm -f
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+CPPFLAGS = -Iincludes
 
-SRCS_DIR	=	srcs
-OBJS_DIR	=	objs
-INC_DIR		=	includes
+SRCS = srcs/ft_isalpha.c \
+	   srcs/ft_isdigit.c \
+	   srcs/ft_isalnum.c \
+	   srcs/ft_isascii.c \
+	   srcs/ft_isprint.c \
+	   srcs/ft_strlen.c \
+	   srcs/ft_memset.c \
+	   srcs/ft_bzero.c \
+	   srcs/ft_memcpy.c \
+	   srcs/ft_memmove.c \
+	   srcs/ft_strlcpy.c \
+	   srcs/ft_strlcat.c \
+	   srcs/ft_toupper.c \
+	   srcs/ft_tolower.c \
+	   srcs/ft_strchr.c \
+	   srcs/ft_strrchr.c \
+	   srcs/ft_strncmp.c \
+	   srcs/ft_memchr.c \
+	   srcs/ft_memcmp.c \
+	   srcs/ft_strnstr.c \
+	   srcs/ft_atoi.c \
+	   srcs/ft_calloc.c \
+	   srcs/ft_strdup.c \
+	   srcs/ft_substr.c \
+	   srcs/ft_strjoin.c \
+	   srcs/ft_strtrim.c \
+	   srcs/ft_split.c \
+	   srcs/ft_itoa.c \
+	   srcs/ft_strmapi.c \
+	   srcs/ft_putchar_fd.c \
+	   srcs/ft_putstr_fd.c \
+	   srcs/ft_putendl_fd.c \
+	   srcs/ft_putnbr_fd.c
 
-SRCS		=	ft_atoi.c \
-				ft_bzero.c \
-				ft_calloc.c \
-				ft_isalnum.c \
-				ft_isalpha.c \
-				ft_isascii.c \
-				ft_isdigit.c \
-				ft_isprint.c \
-				ft_memchr.c \
-				ft_memcmp.c \
-				ft_memcpy.c \
-				ft_memmove.c \
-				ft_memset.c \
-				ft_strchr.c \
-				ft_strdup.c \
-				ft_strlcat.c \
-				ft_strlcpy.c \
-				ft_strlen.c \
-				ft_strncmp.c \
-				ft_strnstr.c \
-				ft_strrchr.c \
-				ft_tolower.c \
-				ft_toupper.c \
-				ft_substr.c \
-				ft_strjoin.c \
-				ft_strtrim.c \
-				ft_split.c \
-				ft_itoa.c \
-				ft_strmapi.c \
-				ft_putstr_fd.c \
-				ft_putchar_fd.c \
-				ft_putendl_fd.c \
-				ft_putnbr_fd.c \
-				ft_lstnew.c \
-				ft_lstadd_front.c \
-				ft_lstsize.c \
-				ft_lstlast.c \
-				ft_lstadd_back.c \
-				ft_lstdelone.c \
-				ft_lstclear.c \
-				ft_lstiter.c \
-				ft_lstmap.c
+BONUS_SRCS = srcs/ft_lstnew.c \
+			 srcs/ft_lstadd_front.c \
+			 srcs/ft_lstsize.c \
+			 srcs/ft_lstlast.c \
+			 srcs/ft_lstadd_back.c \
+			 srcs/ft_lstdelone.c \
+			 srcs/ft_lstclear.c \
+			 srcs/ft_lstiter.c \
+			 srcs/ft_lstmap.c
 
-OBJS		=	$(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
+SRCS_BONUS = $(SRCS) $(BONUS_SRCS)
+
+OBJS = $(SRCS:srcs/%.c=objs/%.o)
+BONUS_OBJS = $(SRCS_BONUS:srcs/%.c=objs/%.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(AR) $(NAME) $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
-$(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c
-	@mkdir -p $(OBJS_DIR)
-	$(CC) $(CFLAGS) -I$(INC_DIR) -c $< -o $@
+bonus: $(BONUS_OBJS)
+	ar rcs $(NAME) $(BONUS_OBJS)
+
+objs/%.o: srcs/%.c
+	@mkdir -p objs
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
 
 clean:
-	$(RM) -r $(OBJS_DIR)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re

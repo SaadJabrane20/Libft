@@ -6,7 +6,7 @@
 /*   By: sajabran <sajabran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 21:12:21 by sajabran          #+#    #+#             */
-/*   Updated: 2026/09/15 21:18:54 by sajabran         ###   ########.fr       */
+/*   Updated: 2026/09/20 18:02:44 by sajabran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t n, size_t size)
 {
 	void		*ptr;
 
+	if (size != 0 && n > SIZE_MAX / size)
+		return (NULL);
 	ptr = malloc(n * size);
 	if (!ptr)
 		return (NULL);

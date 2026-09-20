@@ -6,13 +6,13 @@
 /*   By: sajabran <sajabran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 21:00:58 by sajabran          #+#    #+#             */
-/*   Updated: 2026/09/15 21:44:03 by sajabran         ###   ########.fr       */
+/*   Updated: 2026/09/20 18:06:00 by sajabran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *s)
+char	*ft_strdup(const char *s)
 {
 	int			i;
 	char		*dest;
